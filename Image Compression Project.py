@@ -14,21 +14,7 @@ from skimage import io
 from ipywidgets import interact, interactive, fixed, interact_manual, IntSlider
 import ipywidgets as widgets
 
-plt.rcParams['figure.figsize']  = (20,12)
-
-img = io.imread('C:/Users/This PC/Pictures/Super Heroes/contact_spiderman2.jpg')
-#ax = plt.axes(xticks=[],yticks=[])
-#ax.imshow(img)
-
-img_data = (img/255.0).reshape(-1,3)
-print(img_data.shape)
-
-#x=plot_utils(img_data, title="Input color space: Over 16 million possible colors")
-#x.colorSpace()
-kmeans = MiniBatchKMeans(16).fit(img_data)
-k_colors = kmeans.cluster_centers_[kmeans.predict(img_data)]
-
-img_dir = 'C:/Users/This PC/Pictures/Super Heroes/'
+img_dir = #Enter the path of folder from which the image has to be taken.
 
 @interact
 def color_compression(image=os.listdir(img_dir),
