@@ -1,19 +1,15 @@
+# Dependencies.
 from __future__ import print_function
 import os
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.image as image
-#from plot_utils import plot_utils
 from sklearn.cluster import MiniBatchKMeans
-
-plt.style.use("ggplot")
-
 from skimage import io
-#from sklearn.cluster import KMeans
-
 from ipywidgets import interact, interactive, fixed, interact_manual, IntSlider
 import ipywidgets as widgets
 
+plt.style.use("ggplot")
 img_dir = #Enter the path of folder from which the image has to be taken.
 
 @interact
@@ -36,7 +32,7 @@ def color_compression(image=os.listdir(img_dir),
     ax1.set_yticks([])
     ax1.imshow(k_image)
     
-    ax2.set_title('Original (26,214,4000 colors)')
+    ax2.set_title('Original')
     ax2.set_xticks([])
     ax2.set_yticks([])
     ax2.imshow(input_img)
